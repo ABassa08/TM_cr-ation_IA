@@ -30,7 +30,7 @@ for (t1, t2), count in bigram_count.items():
 # for (t1, t2), prob in list(bigram_probs.items())[:600]:
     # print(f"P({t2} | {t1}) = {prob:.4f}")
 
-def generate_answer(question, bigram_probs, max_length=100):
+def generate_answer(question, bigram_probs, max_length=25):
     doc = nlp(question.lower())
     question_tokens = [token.text for token in doc if not token.is_space and not token.is_punct]
 

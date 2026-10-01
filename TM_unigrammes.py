@@ -26,5 +26,5 @@ for t1, count in unigram_count.items():
 mots = list(unigram_probs.keys())
 poids = list(unigram_probs.values())
 
-sentence = random.choices(mots, weights=poids, k=100)
+sentence = random.choices(mots, weights=poids, k=25)
 print(" ".join(sentence))

@@ -34,11 +34,11 @@ for url in urls:
     for tag in tags:
         text_scraped += tag.get_text() + ""
 text_scraped = re.sub(r"\[.*?\]", "", text_scraped)
-with open("text.txt", "w", encoding="utf-8") as f:
+with open("test.txt", "w", encoding="utf-8") as f:
     f.write(text_scraped)
 nlp = spacy.load("en_core_web_sm")
 
-with open("text.txt", "r", encoding="utf-8") as f:
+with open("test.txt", "r", encoding="utf-8") as f:
     text = f.read()
 
 doc = nlp(text)
@@ -91,4 +91,3 @@ question = input("question:")
 answer = generate_answer(question, bigram_probs)
 print(answer)
 print (bigram_probs)
-
